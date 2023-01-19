@@ -30,7 +30,7 @@ After you're finished please remove all the comments and instructions!
   <!-- <img src="murple_logo.png" alt="logo" width="140"  height="auto" />
   <br/> -->
 
-  <h3><b>Microverse README Template</b></h3>
+  <h3><b>Portfolio project</b></h3>
 
 </div>
 
@@ -60,10 +60,10 @@ After you're finished please remove all the comments and instructions!
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [Hello world] <a name="about-project"></a>
+# 📖 [Portfolio ] <a name="about-project"></a>
 
 
-**[Hello world]** is a  project showing basic html layout.
+**[Portfolio project]** is a  project showing personal information about his/her career.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -98,7 +98,7 @@ After you're finished please remove all the comments and instructions!
 
 
 
-- **[html home page contains :"hello microverse"]**
+- **[ portfolio :"mobile "]**
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -148,7 +148,7 @@ Clone this repository to your desired folder:
 
 
   Use this command in cmd:
-  git clone https://github.com/alphym/hello_microverse_new.git
+  git clone https://github.com/alphym/portfolio.git
 
 
 ### Install
