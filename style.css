@@ -26,20 +26,19 @@ ul li {
   top: 0;
   background-position: center;
 }
-.portfolio-main{
-  max-width: 500px;
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    /* margin: 0 auto; */
-    margin-left: 20px;
-    grid-gap: 12px;
-    align-self: start;
-    justify-content: start;
-    align-content: start;
-    align-items:start;
-     
-    
 
+.portfolio-main {
+  max-width: 500px;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+
+  /* margin: 0 auto; */
+  margin-left: 20px;
+  grid-gap: 12px;
+  align-self: start;
+  justify-content: start;
+  align-content: start;
+  align-items: start;
 }
 
 .main-bar {
