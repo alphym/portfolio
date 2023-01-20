@@ -5,11 +5,17 @@
   margin: 0;
   padding: 0;
 }
-
+a{
+  text-decoration: none;
+  color: inherit;
+}
+ul li{
+  list-style: none;
+}
 .wrapper {
-  height: 718px;
+  height: 100vh;
   width: 375px;
-  background: url('./images/background1.png');
+  
   display: flex;
   flex-direction: column;
   background-size: cover;
@@ -17,12 +23,14 @@
   left: 0;
   top: 0;
   background-position: center;
+  
+  
 }
 
 .main-bar {
   height: 20%;
   width: 100%;
-  background-color: brown;
+  
   display: flex;
 }
 
@@ -30,12 +38,15 @@
   height: 80%;
   width: 100%;
   display: flex;
+  background: url(./images/background1.png);
+  
+  justify-content:center;
 }
 
 .main-bar .right {
   height: 100%;
   width: 50%;
-  background-color: #fff;
+  
   display: flex;
   flex-direction: column;
   padding: 20px;
@@ -46,7 +57,7 @@
 .main-bar .left {
   height: 100%;
   width: 50%;
-  background-color: #fff;
+ 
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -56,25 +67,28 @@
 
 .container {
   position: relative;
-  top: 110px;
-  left: 50px;
+  top: 70px;
+  
   height: 75%;
-  width: 75%;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  
 }
 
 .left-bar {
   height: 100%;
   width: 50%;
-  background-color: blueviolet;
+  
 }
 
 .right-bar {
   height: 100%;
   width: 50%;
-  background-color: green;
+  
 }
 
-.time {
+header .time {
   font-family: 'Roboto', sans-serif;
   font-style: normal;
   font-weight: 500;
@@ -84,14 +98,13 @@
   color: #000;
 }
 
-.logo {
+header .logo {
   font-family: 'Poppins', sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 18px;
   line-height: 20px;
 
-  /* identical to box height, or 111% */
   display: flex;
 
   /* Primary/B400 */
@@ -106,38 +119,41 @@
   font-size: 40px;
   line-height: 52px;
 
-  /* or 130% */
+  
   display: flex;
   align-items: center;
 
-  /* Neutrals/N800 */
+  
   color: #172b4d;
 }
 
 .description {
-  /* Body / 2 */
+  
   font-family: 'Poppins', sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
+  margin-top: 10px;
 
-  /* or 150% */
-
-  /* Neutrals/N600 */
+  
   color: #344563;
 }
 
 .connect {
-  /* Body / 2 - Bolder */
-  font-family: 'Poppins', sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 24px;
-
-  /* identical to box height, or 150% */
-
-  /* Primary/B300 */
-  color: #7f8cff;
+  font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    padding-top: 10px;
+    
+  
+    color: #7F8CFF;
+}
+.social{
+  display: flex;
+  gap: 10px;
+  margin-top: 10px ;
+  align-items: flex-end;
 }
