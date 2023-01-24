@@ -433,3 +433,27 @@ hr.solid {
   margin-top: 10px;
   margin-bottom: 10px;
 }
+
+.contact-me {
+display: flex;
+  flex-direction: column;
+  padding: 15px;
+  gap: 15px;
+  background-image: url(./images/Contact\ me\ \(1\).png);
+    height: 100vh;
+      width: 305px;
+      display: flex;
+      flex-direction: column;
+      background-size: cover;
+      background-repeat: no-repeat;
+      left: 0;
+      top: 0;
+      background-position: center;
+}
+.heading{
+  text-align: center;
+}
+.form{}
+#submit{
+
+}
