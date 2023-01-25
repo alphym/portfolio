@@ -435,12 +435,13 @@ hr.solid {
   margin-bottom: 10px;
 }
 .contact-me{
-    width: 372px;
+    width: 375px;
     height: 820px;
     background: #6070FF;
     background-image: url(./images/contact\ form\ .png);
     background-repeat: no-repeat;
-    background-size: inherit;
+    background-position: center;
+    background-size: 100% 100%;
     border-top-left-radius: 30px;
     padding-left: 24px;
     padding-right: 24px;
@@ -485,10 +486,43 @@ form input{
  
   
 }
-form input name{
-  margin-left: 16px;
-    padding-top: 2px;
-    padding-bottom: 2px;
+form input::placeholder{
+  
+  
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  color: #172B4D;
+  padding-left: 16px;
+  
+}
+
+form textarea{
+  padding-left: 16px;
+  width: 327px;
+  height: 170px;
+  display:flex;
+  left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+  background: #FFFFFF;
+    border: 1px solid #CFD8DC;
+    border-radius: 8px;
+}
+form textarea::placeholder{
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 24px;
+    color: #B3BAC5;
+    padding-top: 15px;
+    
 }
 
 form textarea{
@@ -505,7 +539,7 @@ form button{
   background: #FFFFFF;
   border-radius: 8px;
   border: none;
-  font-family: 'Poppins';
+  font-family: 'Poppins', sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 17px;
