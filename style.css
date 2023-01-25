@@ -278,7 +278,7 @@ header .logo {
 
 .about {
   width: 327px;
-  height: 552px;
+  height: 1075px;
   border-top-right-radius: 8%;
   display: flex;
   flex-direction: column;
@@ -286,6 +286,7 @@ header .logo {
   padding-right: 14px;
   padding-top: 112px;
   gap: 17px;
+  
 }
 
 .about-title {
@@ -433,27 +434,52 @@ hr.solid {
   margin-top: 10px;
   margin-bottom: 10px;
 }
-
-.contact-me {
-display: flex;
-  flex-direction: column;
-  padding: 15px;
-  gap: 15px;
-  background-image: url(./images/Contact\ me\ \(1\).png);
-    height: 100vh;
-      width: 305px;
+.contact-me{
+    width: 375px;
+    height: 779px;
+    background: #6070FF;
+    background-image: url(./images/contact\ form\ .png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    border-top-left-radius: 30px;
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-top: 103px;
+    ;
+}
+.contact-title{
+  width: 801px;
+    height: 56px;
+    font-family: 'Poppins';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 40px;
+      line-height: 52px;
       display: flex;
-      flex-direction: column;
-      background-size: cover;
-      background-repeat: no-repeat;
-      left: 0;
-      top: 0;
-      background-position: center;
+        align-items: center;
+        text-align: center;
+        color: white;
 }
-.heading{
-  text-align: center;
+.contact-sub-title{
+  width: 327px;
+    height: 102px;
+    left: 24px;
+    top: 4802px;
+  
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+    /* or 140% */
+  
+    
+  
+    /* Primary/B50 */
+    padding-top: 12px;
+  
+    color: #EBEBFF;
 }
-.form{}
-#submit{
-
+.form{
+  
 }
