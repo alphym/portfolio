@@ -482,6 +482,13 @@ form input{
   border: 1px solid #CFD8DC;
   border-radius: 8px;
   height: 48px;
+ 
+  
+}
+form input name{
+  margin-left: 16px;
+    padding-top: 2px;
+    padding-bottom: 2px;
 }
 
 form textarea{
