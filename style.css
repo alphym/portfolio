@@ -15,6 +15,13 @@ ul li {
   list-style: none;
 }
 
+body {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
 .wrapper {
   height: 100vh;
   width: 375px;
@@ -22,9 +29,9 @@ ul li {
   flex-direction: column;
   background-size: cover;
   background-repeat: no-repeat;
-  left: 0;
-  top: 0;
   background-position: center;
+  align-items: center;
+  justify-content: center;
 }
 
 .portfolio-main {
@@ -288,8 +295,8 @@ form button:hover {
   border-top-right-radius: 8%;
   display: flex;
   flex-direction: column;
-  padding-left: 14px;
-  padding-right: 14px;
+  padding-left: 16px;
+  padding-right: 16px;
   padding-top: 112px;
   gap: 17px;
 }
@@ -501,6 +508,17 @@ form #submit-btn {
   cursor: pointer;
 }
 
+form #submit-btn:hover {
+  background-color: #6070ff;
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+form #submit-btn:focus {
+  color: #6070ff;
+  background: #fff;
+}
+
 form input {
   width: 100%;
   background: #fff;
@@ -556,5 +574,5 @@ form textarea:focus {
   background: #0d151e;
   border-radius: 10px;
   width: 50%;
-  float: center;
+  width: 365px;
 }
