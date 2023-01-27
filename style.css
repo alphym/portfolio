@@ -45,8 +45,6 @@ body {
 .main-main {
   height: 100%;
   width: 100%;
-
-  
 }
 
 .main-bar {
@@ -167,8 +165,6 @@ header .logo {
   align-items: flex-end;
 }
 
-
-/* project start here */
 .portfolio-main .project {
   background-color: #fff;
   display: flex;
@@ -471,8 +467,6 @@ hr.solid {
   padding-right: 24px;
   padding-top: 30px;
   gap: 12px;
-
-  
   position: relative;
 }
 
