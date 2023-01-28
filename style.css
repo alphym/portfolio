@@ -649,4 +649,10 @@ form textarea:focus {
   input[type=email]:hover {
     width: 50%;
   }
+  textarea {
+    transition: width 2s;
+  }
+  textarea:hover {
+    width: 50%;
+  }
 }
