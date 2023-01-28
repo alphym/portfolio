@@ -292,6 +292,7 @@ header .logo {
   line-height: 24px;
   color: #396df2;
   cursor: pointer;
+  background-color: white;
 }
 
 form button:hover {
@@ -651,7 +652,7 @@ form textarea:focus {
   }
 
   .main-content {
-    background-image: url('./images/desktop_bg.png');
+    background-image: url('./images/deskbg.png');
     padding-left: 180px;
     padding-right: 260px;
   }
@@ -688,6 +689,11 @@ form textarea:focus {
     height: 496px;
     padding: 24px;
     gap: 46px;
+  }
+
+  .portfolio-main {
+    padding-left: 142px;
+    padding-right: 142px;
   }
 
   .pro-title-one {
@@ -751,8 +757,15 @@ form textarea:focus {
     list-style: none;
   }
 
+  #project-detail-all .project-tag ul {
+    justify-content: start;
+    gap: 20px;
+    list-style: none;
+  }
+
   .project-button button {
     margin-top: 20px;
+    background-color: white;
   }
 
   .project-description p {
@@ -795,6 +808,7 @@ form textarea:focus {
   .details {
     width: 55%;
     height: 100%;
+    padding-right: 182px;
   }
 
   .about-social .about-s-one {
@@ -808,6 +822,7 @@ form textarea:focus {
   #lang-tag-new {
     display: flex;
     margin-bottom: 10px;
+    gap: 14px;
   }
 
   #lang-tag-new .list-language {
