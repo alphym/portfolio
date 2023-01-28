@@ -45,6 +45,8 @@ body {
 .main-main {
   height: 100%;
   width: 100%;
+
+  /* background-color: #253858; */
 }
 
 .main-bar {
@@ -165,6 +167,8 @@ header .logo {
   align-items: flex-end;
 }
 
+
+/* project start here */
 .portfolio-main .project {
   background-color: #fff;
   display: flex;
@@ -467,6 +471,8 @@ hr.solid {
   padding-right: 24px;
   padding-top: 30px;
   gap: 12px;
+
+  /* margin-bottom: 128px; */
   position: relative;
 }
 
@@ -582,4 +588,52 @@ form textarea:focus {
   border-radius: 10px;
   width: 50%;
   width: 365px;
+}
+@media all and (min-width: 1024px){
+ .main-content{
+  background-image: url(./images/deskbg.png);
+  background-repeat: no-repeat;
+  padding-left: 260px;
+  padding-right: 260px;
+  padding-top: 150px;
+  padding-bottom: 150px;
+ }
+ .portfolio-main .project{
+  flex-direction: row;
+ }
+ .project .project-image{
+  width: 50%;
+  height: 100%;
+  
+  
+  
+ }
+ .project .project-details-all{
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-top: 48px;
+  padding-left: 46px;
+  padding-right: 46px;
+  gap: 20px;
+ }
+ .project-image img{
+  width: 100%;
+  height: 100%;
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-top: 24px;
+ }
+ .projectsub-title ul {
+
+   gap: 12px;
+ }
+.project-tag ul {
+  
+  justify-content: start;
+  gap: 20px;
+  list-style: none;
+}
+ 
 }
