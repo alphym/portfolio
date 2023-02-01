@@ -289,7 +289,7 @@ header .logo {
   font-weight: 500;
   font-size: 17px;
   line-height: 24px;
-  color: #396df2;
+  color: #0e47d8;
   cursor: pointer;
   background-color: white;
 }
@@ -391,7 +391,7 @@ form button:hover {
   line-height: 24px;
   text-align: center;
   letter-spacing: 0.03em;
-  color: #396df2;
+  color: #0e47d8;
   cursor: pointer;
 }
 
