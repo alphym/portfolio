@@ -305,6 +305,16 @@ form button:hover {
   color: white;
 }
 
+.project-button button:active {
+  background: #2230D2;
+  color: white;
+}
+.project-button button:disabled {
+  border: 1px solid #C1C7D0;
+  color: #5E6C84;
+  background: #E5E5E5;
+}
+
 #new-main-about {
   display: none;
 }
