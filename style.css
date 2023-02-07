@@ -28,8 +28,52 @@ body {
   height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  
+  
+  /* align-items: center;
+  justify-content: center; */
+}
+
+.sub-menu {
+  height: 100vh;
+    width: 100%;
+    display: flex;
+    background: #6070FF;
+    position: fixed;
+    top: 72px;
+    right: 100%;
+    transition: 0.3s !important;
+    z-index: 99;
+   /* mix-blend-mode: multiply;  */
+  /* Opacity: 70%; */
+  Fill: Solid;
+  
+   
+    
+    
+
+}
+.sub-menu.active{
+  right:0;
+}
+.bar.active {
+ 
+  display: none;
+}
+
+.sub-container{
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-size: 22px; 
+    color: #FFFFFF;
+    height: 24px;
+      width: 251px;
+      margin-left: 28px;
+      margin-top: 8px;
+     
 }
 
 .portfolio-main {
@@ -46,15 +90,25 @@ body {
   width: 100%;
 }
 
+.close-menu.no-active {
+  display: none;
+}
+
+.bar.no-active {
+  display: none;
+}
+
 .main-bar {
-  height: 20%;
+  height: 72px;
   width: 100%;
   display: flex;
   background-color: white;
+  
+  
 }
 
 .main-content {
-  height: 80%;
+  height: calc(100vh - 72px);
   width: 100%;
   display: flex;
   background: url(./images/background1.png);
@@ -124,6 +178,7 @@ header .logo {
   font-size: 18px;
   line-height: 20px;
   display: flex;
+  transition: 0.3s !important;
 
   /* Primary/B400 */
   color: #6070ff;
@@ -309,6 +364,7 @@ form button:hover {
   background: #2230D2;
   color: white;
 }
+
 .project-button button:disabled {
   border: 1px solid #C1C7D0;
   color: #5E6C84;
@@ -628,9 +684,14 @@ form textarea:focus {
   .mobile {
     display: none;
   }
+  .sub-menu{
+    display: none;
+  }
 
   .main-bar {
     justify-content: space-between;
+    background: white !important;
+    position: static !important;
   }
 
   #desktop {
