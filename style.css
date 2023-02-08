@@ -28,52 +28,45 @@ body {
   height: 100vh;
   display: flex;
   flex-direction: column;
-  
-  
+
+
   /* align-items: center;
   justify-content: center; */
 }
 
 .sub-menu {
   height: 100vh;
-    width: 100%;
-    display: flex;
-    background: #6070FF;
-    position: fixed;
-    top: 72px;
-    right: 100%;
-    transition: 0.3s !important;
-    z-index: 99;
-   /* mix-blend-mode: multiply;  */
-  /* Opacity: 70%; */
-  Fill: Solid;
-  
-   
-    
-    
+  width: 100%;
+  display: flex;
+  background: #6070ff;
+  position: fixed;
+  top: 72px;
+  right: 100%;
+  transition: 0.3s !important;
+  z-index: 99;
+  mix-blend-mode: multiply;
+}
 
+.sub-menu.active {
+  right: 0;
 }
-.sub-menu.active{
-  right:0;
-}
+
 .bar.active {
- 
   display: none;
 }
 
-.sub-container{
+.sub-container {
   display: flex;
   gap: 20px;
   flex-direction: column;
   font-family: 'Poppins', sans-serif;
-    font-style: normal;
-    font-size: 22px; 
-    color: #FFFFFF;
-    height: 24px;
-      width: 251px;
-      margin-left: 28px;
-      margin-top: 8px;
-     
+  font-style: normal;
+  font-size: 22px;
+  color: #fff;
+  height: 24px;
+  width: 251px;
+  margin-left: 28px;
+  margin-top: 8px;
 }
 
 .portfolio-main {
@@ -103,8 +96,6 @@ body {
   width: 100%;
   display: flex;
   background-color: white;
-  
-  
 }
 
 .main-content {
@@ -361,14 +352,14 @@ form button:hover {
 }
 
 .project-button button:active {
-  background: #2230D2;
+  background: #2230d2;
   color: white;
 }
 
 .project-button button:disabled {
-  border: 1px solid #C1C7D0;
-  color: #5E6C84;
-  background: #E5E5E5;
+  border: 1px solid #c1c7d0;
+  color: #5e6c84;
+  background: #e5e5e5;
 }
 
 #new-main-about {
@@ -684,7 +675,8 @@ form textarea:focus {
   .mobile {
     display: none;
   }
-  .sub-menu{
+
+  .sub-menu {
     display: none;
   }
 
