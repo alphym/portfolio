@@ -28,6 +28,7 @@ body {
   height: 100vh;
   display: flex;
   flex-direction: column;
+  
 }
 
 .sub-menu {
@@ -36,11 +37,18 @@ body {
   display: flex;
   background: #6070ff;
   position: fixed;
-  top: 72px;
+  padding-top: 106px;
+  padding-left: 28px;
   right: 100%;
   transition: 0.3s !important;
   z-index: 99;
   mix-blend-mode: multiply;
+}
+.sub-menu .close-menu{
+  position: absolute;
+  top: 62px;
+  right: 38px;
+
 }
 
 .sub-menu.active {
@@ -103,7 +111,13 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-color: white;
+  
 }
+.blur{
+  filter: blur(8px);
+    -webkit-filter: blur(8px);
+}
+
 
 #desktop {
   display: none;
@@ -136,6 +150,7 @@ body {
   width: 90%;
   display: flex;
   flex-direction: column;
+ 
 }
 
 .left-bar {
@@ -672,9 +687,9 @@ form textarea:focus {
     display: none;
   }
 
-  .sub-menu {
+  /* .sub-menu {
     display: none;
-  }
+  } */
 
   .main-bar {
     justify-content: space-between;
