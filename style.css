@@ -28,7 +28,6 @@ body {
   height: 100vh;
   display: flex;
   flex-direction: column;
-  
 }
 
 .sub-menu {
@@ -44,11 +43,11 @@ body {
   z-index: 99;
   mix-blend-mode: multiply;
 }
-.sub-menu .close-menu{
+
+.sub-menu .close-menu {
   position: absolute;
   top: 62px;
   right: 38px;
-
 }
 
 .sub-menu.active {
@@ -111,13 +110,12 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-color: white;
-  
-}
-.blur{
-  filter: blur(8px);
-    -webkit-filter: blur(8px);
 }
 
+.blur {
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+}
 
 #desktop {
   display: none;
@@ -150,7 +148,6 @@ body {
   width: 90%;
   display: flex;
   flex-direction: column;
- 
 }
 
 .left-bar {
