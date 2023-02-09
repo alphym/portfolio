@@ -48,10 +48,15 @@ body {
   position: absolute;
   top: 62px;
   right: 38px;
+  cursor: pointer;
 }
 
 .sub-menu.active {
   right: 0;
+}
+
+.bar {
+  cursor: pointer;
 }
 
 .bar.active {
