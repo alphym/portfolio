@@ -49,8 +49,6 @@ body {
   top: 62px;
   right: 38px;
   cursor: pointer;
-  height: 20px;
-  width: 20px;
 }
 
 .sub-menu.active {
@@ -706,12 +704,6 @@ form textarea:focus {
   display: flex;
 }
 
-#close-modal {
-  height: 12px;
-  width: 12px;
-  cursor: pointer;
-}
-
 .single-modal {
   height: 100%;
   width: 100%;
@@ -731,6 +723,7 @@ form textarea:focus {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  gap: 10px;
 }
 
 .modal-title {
@@ -743,8 +736,8 @@ form textarea:focus {
   font-family: 'Poppins', sans-serif;
   font-style: normal;
   font-weight: 700;
-  font-size: 16px;
-  line-height: 38px;
+  font-size: 32px;
+  line-height: 44px;
   color: #172b4d;
 }
 
@@ -850,11 +843,6 @@ form textarea:focus {
   color: #396df2;
 }
 
-.modal-mobile-btn img {
-  height: 18px;
-  width: 18px;
-}
-
 @media all and (min-width: 768px) {
   /* modal section start */
   .container-modal {
@@ -878,7 +866,6 @@ form textarea:focus {
 
   .top-modal {
     height: 60%;
-    gap: 5px;
   }
 
   .top-modal img {
@@ -952,11 +939,6 @@ form textarea:focus {
     font-size: 15px;
     line-height: 20px;
     color: #396df2;
-  }
-
-  .modal-desk-btn img {
-    height: 18px;
-    width: 18px;
   }
 
   /* section wrapper :start */
@@ -1301,7 +1283,7 @@ form textarea:focus {
   .container-modal {
     padding-left: 16px;
     padding-right: 16px;
-    padding-top: 60px;
+    padding-top: 45px;
     padding-bottom: 50px;
   }
 
