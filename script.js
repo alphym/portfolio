@@ -7,23 +7,27 @@ const MainSection = document.querySelector('.main-main');
 
 const allProjectContainer = document.getElementById('all-project-container');
 
+
+
 const containerModalId = document.getElementById('containerModalId');
-// mobile key get
-const mobileNameInput = document.getElementById('name');
-const mobileEmailInput = document.getElementById('email');
-const mobileMessageInput = document.getElementById('message');
 
-mobileNameInput.value = localStorage.getItem('mobileNameInput');
-mobileEmailInput.value = localStorage.getItem('mobileEmailInput');
-mobileMessageInput.value = localStorage.getItem('mobileMessageInput');
-// desktop key get
-const desktopNameInput = document.querySelector('.nameDesktop');
-const desktopEmailInput = document.querySelector('.emailDesktop');
-const desktopMessageInput = document.querySelector('.messageDesktop');
+// desktop get
+let NameValueIn = JSON.parse(localStorage.getItem('finalFormData'));
 
-desktopNameInput.value = localStorage.getItem('mobileNameInput');
-desktopEmailInput.value = localStorage.getItem('mobileEmailInput');
-desktopMessageInput.value = localStorage.getItem('mobileMessageInput');
+const desktopInputN = document.querySelector('.nameDesktop');
+const desktopInputE = document.querySelector('.emailDesktop');
+const desktopInputM = document.querySelector('.messageDesktop');
+if(NameValueIn === null){
+  desktopInputN.value = '';
+  desktopInputE.value = '';
+  desktopInputM.value = '';
+}
+else{
+  desktopInputN.value = NameValueIn.name;
+  desktopInputE.value = NameValueIn.email;
+  desktopInputM.value = NameValueIn.message;
+  }
+
 
 let finalContainerModal = '';
 
@@ -294,9 +298,6 @@ form.addEventListener('submit', (event) => {
   // if valid, submit the form.
   if (nameValid && emailValid && textValid) {
     form.submit();
-    localStorage.removeItem('mobileNameInput');
-    localStorage.removeItem('mobileEmailInput');
-    localStorage.removeItem('mobileMessageInput');
     form.reset();
   }
 });
@@ -314,29 +315,44 @@ formTwo.addEventListener('submit', (event) => {
   if (nameValid && emailValid && textValid) {
     formTwo.submit();
     formTwo.reset();
+    localStorage.removeItem('finalFormData');
   }
 });
 
 // end validate email
 
-// store information in storage
 
-mobileNameInput.addEventListener('keyup', () => {
-  localStorage.setItem('mobileNameInput', mobileNameInput.value);
-});
-mobileEmailInput.addEventListener('keyup', () => {
-  localStorage.setItem('mobileEmailInput', mobileEmailInput.value);
-});
-mobileMessageInput.addEventListener('keyup', () => {
-  localStorage.setItem('mobileMessageInput', mobileMessageInput.value);
-});
 
-desktopNameInput.addEventListener('keyup', () => {
-  localStorage.setItem('mobileNameInput', desktopNameInput.value);
-});
-desktopEmailInput.addEventListener('keyup', () => {
-  localStorage.setItem('mobileEmailInput', desktopEmailInput.value);
-});
-desktopMessageInput.addEventListener('keyup', () => {
-  localStorage.setItem('mobileMessageInput', desktopMessageInput.value);
+  document.querySelectorAll(".contact-form-one input,.contact-form-one textarea").forEach(input =>{
+    input.addEventListener("keyup", function(){
+      const finalFormData = {}
+      document.querySelectorAll(".contact-form-one input,.contact-form-one textarea").forEach(input =>{
+        finalFormData[input.id] = input.value
+      });
+      localStorage.setItem("finalFormData", JSON.stringify(finalFormData));
+    });
+  })
+
+  
+  document.querySelectorAll("#signup-two input,#signup-two textarea").forEach(input =>{
+    input.addEventListener("keyup", function(){
+      const finalFormData = {}
+      document.querySelectorAll("#signup-two input,#signup-two textarea").forEach(input =>{
+        finalFormData[input.id] = input.value
+      });
+      localStorage.setItem("finalFormData", JSON.stringify(finalFormData));
+    });
+  })
+
+
+// Get form data from local storage and populate form inputs when the page loads
+window.addEventListener("load", function() {
+  const formData = JSON.parse(localStorage.getItem("finalFormData") || "{}");
+
+  for (const key in formData) {
+    const input = document.getElementById(key);
+    if (input) {
+      input.value = formData[key];
+    }
+  }
 });
