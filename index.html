@@ -225,27 +225,47 @@
             <p class="contact-des">If you have an application you are interested in developing, a
                 feature that you need built or a project that needs
                 coding. I’d love to help with it</p>
-            <form class="contact-form-one" action="https://formspree.io/f/mvonzpbb" method="post">
-                <input type="text" name="name" id="name" placeholder="write your name here" required maxlength="30">
-                <input type="email" name="email" id="email" placeholder="Enter your email here" required>
-
-                <textarea name="message" cols="30" rows="10" id="message" maxlength="500" required
-                    placeholder="write your message here" type="text"></textarea>
-                <button id="submit-btn" type="">Get in touch</button>
-            </form>
+                <form class="contact-form-one" action="https://formspree.io/f/mvonzpbb" method="post" id="signup">
+                    <div class="input-group-text">
+                        <input type="text" name="name" id="name" placeholder="write your name here"  maxlength="30">
+                        <small></small>
+                    </div>
+                    <div class="input-group-email">
+                        <input type="email" name="email" id="email" placeholder="Enter your email here" required>
+                        <small></small>
+                    </div>
+    
+                    <div class="input-group-message">
+                        <textarea name="message" cols="30" rows="10" id="message" maxlength="500" 
+                        placeholder="write your message here" type="text"></textarea>
+                        <small></small>
+                    </div>
+    
+                    <button id="submit-btn" type="submit">Get in touch</button>
+                </form>
             <div id="contact-container">
                 <h3>Contact me</h3>
                 <p>If you have an application you are interested in developing, a
                     feature that you need built or a project that needs
                     coding. I’d love to help with it</p>
-                <form action="https://formspree.io/f/mvonzpbb" method="post">
-                    <input type="text" name="name" id="name" placeholder="write your name here" required maxlength="30">
-                    <input type="email" name="email" id="email" placeholder="Enter your email here" required>
-
-                    <textarea name="message" cols="30" rows="10" id="message" maxlength="500" required
-                        placeholder="write your message here" type="text"></textarea>
-                    <button id="submit-btn" type="">Get in touch</button>
-                </form>
+                    <form action="https://formspree.io/f/mvonzpbb" method="post" id="signup-two">
+                        <div class="input-group-text">
+                            <input type="text" name="name" id="name" placeholder="write your name here"  maxlength="30">
+                            <small></small>
+                        </div>
+                        <div class="input-group-email">
+                            <input type="email" name="email" id="email" placeholder="Enter your email here" required>
+                        <small></small>
+                        </div>
+    
+                        <div class="input-group-message">
+                            <textarea name="message" cols="30" rows="10" id="message" maxlength="500" 
+                            placeholder="write your message here" type="text"></textarea>
+                            <small></small>
+                        </div>
+    
+                        <button id="submit-btn" type="submit">Get in touch</button>
+                    </form>
             </div>
         </section>
     </div> 
