@@ -583,6 +583,13 @@ hr.solid {
   color: #ebebff;
 }
 
+small {
+  color: #ff4545;
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 50px;
+}
+
 form {
   padding-top: 40px;
   width: 100%;
