@@ -81,7 +81,7 @@ body {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   align-self: start;
-  justify-content: start;
+  justify-content: center;
   align-content: center;
   align-items: center;
 }
@@ -501,7 +501,6 @@ form button:hover {
 
 .list-language {
   display: flex;
-  width: 303px;
   height: 66.72px;
   background: #f7f7f9;
   border-radius: 8px;
@@ -678,7 +677,270 @@ form textarea:focus {
   width: 365px;
 }
 
+/* pop section start */
+
+.blul-content {
+  background: #c1c7d0;
+  mix-blend-mode: multiply;
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+}
+
+.container-modal {
+  height: 100vh;
+  width: 100vw;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 60px;
+  padding-bottom: 50px;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  display: none;
+}
+
+.container-modal.active {
+  display: flex;
+}
+
+.single-modal {
+  height: 100%;
+  width: 100%;
+  padding: 16px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  border: 1px solid #dfe1e6;
+  border-radius: 16px;
+  background: #fff;
+}
+
+/* start top modal */
+.top-modal {
+  height: 50%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.modal-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-title h3 {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 44px;
+  color: #172b4d;
+}
+
+.top-modal ul {
+  display: flex;
+  gap: 26px;
+}
+
+.top-modal ul li {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 16px;
+  color: #344563;
+}
+
+.top-modal ul .tag-dot {
+  list-style: disc;
+}
+
+.top-modal img {
+  height: 60%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* end top modal */
+
+/* start bottom modal */
+
+.bottom-modal {
+  height: 50%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.bottom-modal-desc {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.bottom-modal-desktop {
+  display: none;
+}
+
+.bottom-modal .bottom-modal-desc p {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #344563;
+}
+
+.bottom-modal .bottom-modal-desc ul {
+  display: flex;
+  gap: 4px;
+}
+
+.bottom-modal .bottom-modal-desc ul li {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  color: #6070ff;
+  padding: 4px 12px;
+  background: #ebebff;
+  border-radius: 8px;
+}
+
+.modal-btn-view {
+  width: 100%;
+  display: flex;
+  gap: 20px;
+}
+
+.modal-btn-view .modal-mobile-btn {
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 12px 22px;
+  gap: 10px;
+  border: 1px solid #6070ff;
+  border-radius: 8px;
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 20px;
+  justify-content: space-between;
+  text-align: center;
+
+  /* Primary/B500 */
+
+  color: #396df2;
+}
+
 @media all and (min-width: 768px) {
+  /* modal section start */
+  .container-modal {
+    padding-left: 142px;
+    padding-right: 142px;
+    padding-top: 77px;
+    padding-bottom: 50px;
+  }
+
+  .single-modal {
+    gap: 59px;
+    background: #fff;
+    border: 1px solid #ebecf0;
+    box-shadow: 0 48px 48px rgba(37, 47, 137, 0.08);
+    border-radius: 16px;
+  }
+
+  .bottom-modal {
+    display: none;
+  }
+
+  .top-modal {
+    height: 60%;
+  }
+
+  .top-modal img {
+    height: 85%;
+    object-fit: fill;
+  }
+
+  .bottom-modal-desktop {
+    display: flex;
+    flex-direction: row;
+    height: 40%;
+    gap: 24px;
+  }
+
+  .bottom-modal-desktop p {
+    width: 60%;
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: #344563;
+  }
+
+  .bottom-modal-desktop .modal-desktop-right {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .modal-desktop-right ul {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+  }
+
+  .modal-desktop-right ul li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 4px 8px;
+    background: #ebebff;
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.03em;
+    color: #6070ff;
+  }
+
+  .modal-btn-desk-view {
+    display: flex;
+    width: 100%;
+    gap: 10px;
+  }
+
+  .modal-btn-desk-view .modal-desk-btn {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 8px 10px;
+    gap: 10px;
+    border: 1px solid #6070ff;
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 20px;
+    color: #396df2;
+  }
+
   /* section wrapper :start */
 
   .bottom-menu {
@@ -796,9 +1058,27 @@ form textarea:focus {
     height: 100%;
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    padding-top: 24px;
+    gap: 5px;
+    padding-top: 12px;
     padding-right: 22px;
+  }
+
+  .multi-project #project-detail-all {
+    gap: 10px;
+  }
+
+  .multi-project-two #project-detail-all {
+    gap: 10px;
+  }
+
+  .multi-project #project-detail-all .project-title h2 {
+    font-size: 25px;
+    line-height: 30px;
+  }
+
+  .multi-project-two #project-detail-all .project-title .descr-p {
+    font-size: 25px;
+    line-height: 30px;
   }
 
   .project .project-image {
@@ -982,5 +1262,33 @@ form textarea:focus {
 
   input[type=email]:hover {
     width: 50%;
+  }
+}
+
+@media all and (max-width: 480px) {
+  .container-modal {
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 60px;
+    padding-bottom: 50px;
+  }
+
+  .modal-btn-view .modal-mobile-btn {
+    padding: 4px 14px;
+    font-size: 12px;
+  }
+}
+
+@media all and (max-width: 320px) {
+  .container-modal {
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 45px;
+    padding-bottom: 50px;
+  }
+
+  .modal-btn-view .modal-mobile-btn {
+    padding: 2px 12px;
+    font-size: 10px;
   }
 }
