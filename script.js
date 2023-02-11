@@ -4,17 +4,78 @@ const closeMenu = document.querySelector('.sub-menu .close-menu');
 const mainBarContent = document.querySelector('.main-bar');
 const mainContent = document.querySelector('.main-content');
 const MainSection = document.querySelector('.main-main');
+
+const allProjectContainer = document.getElementById('all-project-container');
+
+const containerModalId = document.getElementById('containerModalId');
+
+let finalContainerModal = '';
+
+const containerModalCont = `<div class="single-modal">
+<div class="top-modal">
+    <div class="modal-title">
+        <h3>Tonic</h3>
+        <img id="close-modal" src="./images/close-btn.png" style="height: 12px; width: 12px;cursor: pointer;"  alt="">
+    </div>
+    <ul>
+        <li><a href="#">Canopy</a></li>
+        <li class="tag-dot"><a href="#">Back end dev</a></li>
+        <li class="tag-dot"><a href="#">2015</a></li>
+    </ul>
+    <img class="moda-image-all" src="images/modalpop.png"  alt="">
+</div>
+<div class="bottom-modal">
+    <div class="bottom-modal-desc">
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has 
+            been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the 
+            leap into electronic typesetting, remaining essent</p>
+        <ul>
+            <li>html</li>
+            <li>css</li>
+            <li>javascript</li>
+        </ul>
+    </div>
+    
+    <div class="modal-btn-view">
+        <a class="modal-mobile-btn see-live">See live <img src="./images/modal-live.png" alt="" style="height: 18px; width: 18px;"> </a>
+        <a class="modal-mobile-btn see-source"> See source<img src="./images/modal-source.png" alt="" style="height: 18px; width: 18px;"></a>
+    </div>
+</div>
+<div class="bottom-modal-desktop">
+    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has 
+        been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the 
+        leap into electronic typesetting, remaining essent</p>
+        <div class="modal-desktop-right">
+            <ul>
+                <li><a href="#">html</a></li>
+                <li><a href="#">css</a></li>
+                <li><a href="#">javascript</a></li>
+            </ul>
+            <ul>
+                <li><a href="#">html</a></li>
+                <li><a href="#">css</a></li>
+                <li><a href="#">javascript</a></li>
+            </ul>
+            <div class="modal-btn-desk-view">
+                <a class="modal-desk-btn see-live">See live <img src="./images/modal-live.png" alt="" style="height: 18px; width: 18px;"> </a>
+                <a class="modal-desk-btn see-source"> See source<img src="./images/modal-source.png" alt="" style="height: 18px; width: 18px;"></a>
+            </div>
+        </div>
+</div>
+</div>`;
+finalContainerModal += containerModalCont;
+containerModalId.innerHTML = finalContainerModal;
 const closeModal = document.querySelector('#close-modal');
 const containerModal = document.querySelector('.container-modal');
 const modalTitle = document.querySelector('.modal-title h3');
 const modalDescription = document.querySelector('.bottom-modal-desktop p');
 const modalDescriptionMob = document.querySelector('.bottom-modal-desc p');
 const modalImage = document.querySelector('.moda-image-all');
-const allProjectContainer = document.getElementById('all-project-container');
 const BtnSeeliveDesck = document.querySelector('.modal-desk-btn.see-live');
 const BtnSeeSourceDesck = document.querySelector('.modal-desk-btn.see-source');
 const BtnSeeliveMobile = document.querySelector('.modal-mobile-btn.see-live');
 const BtnSeeSourceMobile = document.querySelector('.modal-mobile-btn.see-source');
+
 const project = {
   0: {
     title: 'Tonic',
