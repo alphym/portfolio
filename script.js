@@ -7,27 +7,23 @@ const MainSection = document.querySelector('.main-main');
 
 const allProjectContainer = document.getElementById('all-project-container');
 
-
-
 const containerModalId = document.getElementById('containerModalId');
 
 // desktop get
-let NameValueIn = JSON.parse(localStorage.getItem('finalFormData'));
+const NameValueIn = JSON.parse(localStorage.getItem('finalFormData'));
 
 const desktopInputN = document.querySelector('.nameDesktop');
 const desktopInputE = document.querySelector('.emailDesktop');
 const desktopInputM = document.querySelector('.messageDesktop');
-if(NameValueIn === null){
+if (NameValueIn === null) {
   desktopInputN.value = '';
   desktopInputE.value = '';
   desktopInputM.value = '';
-}
-else{
+} else {
   desktopInputN.value = NameValueIn.name;
   desktopInputE.value = NameValueIn.email;
   desktopInputM.value = NameValueIn.message;
-  }
-
+}
 
 let finalContainerModal = '';
 
@@ -321,35 +317,31 @@ formTwo.addEventListener('submit', (event) => {
 
 // end validate email
 
-
-
-  document.querySelectorAll(".contact-form-one input,.contact-form-one textarea").forEach(input =>{
-    input.addEventListener("keyup", function(){
-      const finalFormData = {}
-      document.querySelectorAll(".contact-form-one input,.contact-form-one textarea").forEach(input =>{
-        finalFormData[input.id] = input.value
-      });
-      localStorage.setItem("finalFormData", JSON.stringify(finalFormData));
+document.querySelectorAll('.contact-form-one input,.contact-form-one textarea').forEach((input) => {
+  input.addEventListener('keyup', () => {
+    const finalFormData = {};
+    document.querySelectorAll('.contact-form-one input,.contact-form-one textarea').forEach((input) => {
+      finalFormData[input.id] = input.value;
     });
-  })
+    localStorage.setItem('finalFormData', JSON.stringify(finalFormData));
+  });
+});
 
-  
-  document.querySelectorAll("#signup-two input,#signup-two textarea").forEach(input =>{
-    input.addEventListener("keyup", function(){
-      const finalFormData = {}
-      document.querySelectorAll("#signup-two input,#signup-two textarea").forEach(input =>{
-        finalFormData[input.id] = input.value
-      });
-      localStorage.setItem("finalFormData", JSON.stringify(finalFormData));
+document.querySelectorAll('#signup-two input,#signup-two textarea').forEach((input) => {
+  input.addEventListener('keyup', () => {
+    const finalFormData = {};
+    document.querySelectorAll('#signup-two input,#signup-two textarea').forEach((input) => {
+      finalFormData[input.id] = input.value;
     });
-  })
-
+    localStorage.setItem('finalFormData', JSON.stringify(finalFormData));
+  });
+});
 
 // Get form data from local storage and populate form inputs when the page loads
-window.addEventListener("load", function() {
-  const formData = JSON.parse(localStorage.getItem("finalFormData") || "{}");
-
-  for (const key in formData) {
+window.addEventListener('load', () => {
+  const formData = JSON.parse(localStorage.getItem('finalFormData') || '{}');
+  const keysProForm = Object.keys(formData);
+  for (let key = 0; key < keysProForm.length; key += 1) {
     const input = document.getElementById(key);
     if (input) {
       input.value = formData[key];
