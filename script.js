@@ -8,6 +8,22 @@ const MainSection = document.querySelector('.main-main');
 const allProjectContainer = document.getElementById('all-project-container');
 
 const containerModalId = document.getElementById('containerModalId');
+// mobile key get
+const mobileNameInput = document.getElementById('name');
+const mobileEmailInput = document.getElementById('email');
+const mobileMessageInput = document.getElementById('message');
+
+mobileNameInput.value = localStorage.getItem('mobileNameInput');
+mobileEmailInput.value = localStorage.getItem('mobileEmailInput');
+mobileMessageInput.value = localStorage.getItem('mobileMessageInput');
+// desktop key get
+const desktopNameInput = document.querySelector('.nameDesktop');
+const desktopEmailInput = document.querySelector('.emailDesktop');
+const desktopMessageInput = document.querySelector('.messageDesktop');
+
+desktopNameInput.value = localStorage.getItem('mobileNameInput');
+desktopEmailInput.value = localStorage.getItem('mobileEmailInput');
+desktopMessageInput.value = localStorage.getItem('mobileMessageInput');
 
 let finalContainerModal = '';
 
@@ -278,6 +294,9 @@ form.addEventListener('submit', (event) => {
   // if valid, submit the form.
   if (nameValid && emailValid && textValid) {
     form.submit();
+    localStorage.removeItem('mobileNameInput');
+    localStorage.removeItem('mobileEmailInput');
+    localStorage.removeItem('mobileMessageInput');
     form.reset();
   }
 });
@@ -299,3 +318,25 @@ formTwo.addEventListener('submit', (event) => {
 });
 
 // end validate email
+
+// store information in storage
+
+mobileNameInput.addEventListener('keyup', () => {
+  localStorage.setItem('mobileNameInput', mobileNameInput.value);
+});
+mobileEmailInput.addEventListener('keyup', () => {
+  localStorage.setItem('mobileEmailInput', mobileEmailInput.value);
+});
+mobileMessageInput.addEventListener('keyup', () => {
+  localStorage.setItem('mobileMessageInput', mobileMessageInput.value);
+});
+
+desktopNameInput.addEventListener('keyup', () => {
+  localStorage.setItem('mobileNameInput', desktopNameInput.value);
+});
+desktopEmailInput.addEventListener('keyup', () => {
+  localStorage.setItem('mobileEmailInput', desktopEmailInput.value);
+});
+desktopMessageInput.addEventListener('keyup', () => {
+  localStorage.setItem('mobileMessageInput', desktopMessageInput.value);
+});
