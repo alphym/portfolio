@@ -9,6 +9,22 @@ const allProjectContainer = document.getElementById('all-project-container');
 
 const containerModalId = document.getElementById('containerModalId');
 
+// desktop get
+const NameValueIn = JSON.parse(localStorage.getItem('finalFormData'));
+
+const desktopInputN = document.querySelector('.nameDesktop');
+const desktopInputE = document.querySelector('.emailDesktop');
+const desktopInputM = document.querySelector('.messageDesktop');
+if (NameValueIn === null) {
+  desktopInputN.value = '';
+  desktopInputE.value = '';
+  desktopInputM.value = '';
+} else {
+  desktopInputN.value = NameValueIn.name;
+  desktopInputE.value = NameValueIn.email;
+  desktopInputM.value = NameValueIn.message;
+}
+
 let finalContainerModal = '';
 
 const containerModalCont = `<div class="single-modal">
@@ -295,7 +311,40 @@ formTwo.addEventListener('submit', (event) => {
   if (nameValid && emailValid && textValid) {
     formTwo.submit();
     formTwo.reset();
+    localStorage.removeItem('finalFormData');
   }
 });
 
 // end validate email
+
+document.querySelectorAll('.contact-form-one input,.contact-form-one textarea').forEach((input) => {
+  input.addEventListener('keyup', () => {
+    const finalFormData = {};
+    document.querySelectorAll('.contact-form-one input,.contact-form-one textarea').forEach((input) => {
+      finalFormData[input.id] = input.value;
+    });
+    localStorage.setItem('finalFormData', JSON.stringify(finalFormData));
+  });
+});
+
+document.querySelectorAll('#signup-two input,#signup-two textarea').forEach((input) => {
+  input.addEventListener('keyup', () => {
+    const finalFormData = {};
+    document.querySelectorAll('#signup-two input,#signup-two textarea').forEach((input) => {
+      finalFormData[input.id] = input.value;
+    });
+    localStorage.setItem('finalFormData', JSON.stringify(finalFormData));
+  });
+});
+
+// Get form data from local storage and populate form inputs when the page loads
+window.addEventListener('load', () => {
+  const formData = JSON.parse(localStorage.getItem('finalFormData') || '{}');
+  const keysProForm = Object.keys(formData);
+  for (let key = 0; key < keysProForm.length; key += 1) {
+    const input = document.getElementById(key);
+    if (input) {
+      input.value = formData[key];
+    }
+  }
+});
